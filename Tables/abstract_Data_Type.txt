@@ -1,0 +1,28 @@
+create type addr as object
+(
+  division varchar2(20),
+  district varchar2(20),
+  thana    varchar2(20),
+   area    varchar2(20)
+  
+
+);
+
+-----------
+create type con as object
+(
+   email varchar2(30),
+   mobile_no number(15),
+   another_mobile_no number(15)
+);
+----------------
+
+create type com as object
+(
+  type varchar2(50),
+  details varchar2(60),
+  status    varchar2(40),
+  complain_date date
+);
+
+-----------------------------

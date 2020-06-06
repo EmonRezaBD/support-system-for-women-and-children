@@ -1,0 +1,19 @@
+Dear Students,
+
+Tomorrow there will be a project update. This is the second project update that will carry minimum 40% marks from your total database project. Update time is strictly maintained. Those groups fail to show update they will get 0 out of 40%. Each group member will be evaluated separately.
+
+We will check the following points on the next update:
+1. All Table of your project with constraints
+2. Some functionalities using subquery
+
+Group distributions:
+• Monday : odd groups
+• Wednesday : even groups
+
+Notes:
+*** It is a software project. So please show your project update whatever you have completed.
+*** As update 1 for most of the groups are not good so you need to give extra care on update-2.
+*** As like earlier during class period we will call upon individuals to share his/ her screen.
+*** We will not repeat update-2 further. So if anyone get 0 that will be counted as 0 as usual.
+
+Stay home & stay safe.
