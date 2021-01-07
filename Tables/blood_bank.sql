@@ -15,3 +15,5 @@ values('1','B+ 20 bag','016645','newbloodbank@gmail.com','Rangpur');
 
 insert into blood_bank
 values('2','O+ 50 bag','018645','lagfarmabloodbank@gmail.com','Dhaka');
+
+values('3','O+ 50 bag','018645','lagfloodbank@gmail.com','Dhaka');
