@@ -50,49 +50,77 @@
     <section>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 side-image d-none d-md-block">
-                    <img src="img/childrenRight.jpg" alt="Login">
+                <div class="col-md-6 side-image-2 d-none d-md-block">
+
+
+
+                    <h2> Welcome to Chaya. </h2>
+                    <p> <h3> Hospitals in charge </h3> </p>
+
+                     <?php
+
+                            $conn = oci_connect("emonreza","rezacse", "localhost/XE");
+                              if(!$conn){
+                                  echo "Failed to connect to Oracle";
+                                  exit();
+                              }
+
+
+
+                        $user_id = $_POST["name"];
+                        $name = $_POST["mobile"];
+                        $age = $_POST["email"];
+                        $email = $_POST["location"];
+
+                        $phoneNumber =  $_POST["fax"];
+                       
+
+
+                        $query = "insert into Hospital(Hospital_Name,Mobile,Email,Location,Fax_No) values('$user_id','$name','$age','email','phoneNumber')";
+                        echo "You have inserted a line";
+
+                        $stido = oci_parse($conn, $query);
+                         oci_execute($stido);
+
+
+                            $sql = "select * from Hospital";
+
+
+                              $stid = oci_parse($conn, $sql);
+                              oci_execute($stid);
+
+                              // echo " Hello";
+
+                              echo "<table border='3'>\n";
+
+                            while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) 
+                            {
+                              echo "<tr>\n";
+                              foreach ($row as $item)
+                               {
+                                echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+                              }
+                             echo "</tr>\n";
+                          }
+                          echo "</table>\n";
+                                                                                  
+
+                        
+                                
+                            ?>
+
+
+
+
                 </div>
-                <div class="col-md-6">
-                    <div class="login-box">
-                        <div class="title">
-                            <img src="img/favicon.png" alt="Logo">
-                            <h3>Login</h3>
-                        </div>
-                        <form action="loginConnect.php" method="POST" class="form-1">
-                            <div class="row mt-4 form-group">
-                                <div class="col-12">
-                                    <input type="email" placeholder="Username / Email" name="email">
-                                </div>
-                            </div>
-                            <div class="row mt-4 form-group">
-                                <div class="col-12">
-                                    <input type="password" placeholder="Password" name="pass">
-                                </div>
-                            </div>
-                            <div class="row mt-4 form-group">
-                                <div class="col-12">
-                                    <a href="#">Forgot your password ?</a>
-                                </div>
-                            </div>
-                            <div class="row mt-4 form-group">
-                                <div class="col-12">
-                                    <button type="submit" class="btn-2">Login</button>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="mt-5 text-center">
-                            <a class="register-text" href="registration.html">Don't have an account? Register</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
 
-        
+              
+
     </section>
     <!-- End -->
-
+       
 
 
     <!-- Footer -->
@@ -145,13 +173,11 @@
     <!-- End -->
 
 
-
-
-
-
     <script src="js/jquery3.5.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
 </html>
+
+ 

@@ -50,49 +50,123 @@
     <section>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 side-image d-none d-md-block">
-                    <img src="img/childrenRight.jpg" alt="Login">
+                <div class="col-md-6 side-image-2 d-none d-md-block">
+                    <img src="img/acheivement.jpg" alt="Login">
                 </div>
                 <div class="col-md-6">
                     <div class="login-box">
                         <div class="title">
                             <img src="img/favicon.png" alt="Logo">
-                            <h3>Login</h3>
+                            <h3>Complain Here</h3>
                         </div>
-                        <form action="loginConnect.php" method="POST" class="form-1">
+                        <form action="#" method="POST" class="form-1">
                             <div class="row mt-4 form-group">
                                 <div class="col-12">
-                                    <input type="email" placeholder="Username / Email" name="email">
+                                    <label>National ID Number</label>
+                                    <input type="text" placeholder="National ID Number" name="nid">
                                 </div>
                             </div>
                             <div class="row mt-4 form-group">
                                 <div class="col-12">
-                                    <input type="password" placeholder="Password" name="pass">
+                                    <label>Type </label>
+                                    <input type="text" placeholder="Type" name="type">
+                                </div>
+                            </div>
+
+                            <div class="row mt-4 form-group">
+                                <div class="col-12">
+                                    <label>Details</label>
+                                    <input type="text" placeholder="Details" name="details">
+                                </div>
+                            </div>
+
+                            <div class="row mt-4 form-group">
+                                <div class="col-12">
+                                    <label>Time</label>
+                                    <input type="text" placeholder="time" name="time">
                                 </div>
                             </div>
                             <div class="row mt-4 form-group">
                                 <div class="col-12">
-                                    <a href="#">Forgot your password ?</a>
+                                    <label>Place</label>
+                                    <input type="text" placeholder="Place" name="place">
                                 </div>
                             </div>
+
                             <div class="row mt-4 form-group">
                                 <div class="col-12">
-                                    <button type="submit" class="btn-2">Login</button>
+                                    <label>Image</label>
+                                    <input type="file" placeholder="Image if any" name="image">
+                                </div>
+                            </div>
+
+                            <div class="row mt-4 form-group">
+                                <div class="col-12">
+                                    <label>Audio</label>
+                                    <input type="file" placeholder="Audio" name="audio">
+                                </div>
+                            </div>
+
+                            <div class="row mt-4 form-group">
+                                <div class="col-12">
+                                    <label>Video</label>
+                                    <input type="file" placeholder="Video" name="video">
+                                </div>
+
+                            </div>
+
+
+                            <div class="row mt-4 form-group">
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn-2">Submit</button>
                                 </div>
                             </div>
                         </form>
-                        <div class="mt-5 text-center">
-                            <a class="register-text" href="registration.html">Don't have an account? Register</a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        
+        <div class="col-md-6">
+
+
+                        <?php
+
+                         $conn = oci_connect("emonreza","rezacse", "localhost/XE");
+                          if(!$conn){
+                              echo "Failed to connect to Oracle";
+                              exit();
+                          }
+
+                        $id = $_POST["nid"];
+                        $type = $_POST["type"];
+                        $details = $_POST["details"];
+                        $time = $_POST["time"];
+
+                        $place =  $_POST["place"];
+                        $image = $_POST["image"];
+                        $audio = $_POST["audio"];
+                        $video = $_POST["video"];
+                       
+                        $query = "insert into incident (id,type,details,time,place,image,audio,video) 
+                        values('$id','$type','$details','$time','$place','$image','$audio','$video')";
+
+                        $stid = oci_parse($conn, $query);
+                        oci_execute($stid);
+
+                        echo "One value updated.";
+                        oci_close($conn);
+
+
+                        ?>
+                    
+                </div>
+
+
+
+
     </section>
     <!-- End -->
-
 
 
     <!-- Footer -->

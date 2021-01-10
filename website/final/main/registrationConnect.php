@@ -111,8 +111,14 @@
 
         </div>
 
-                   <a href="test.html"> Test page </a>
+                   <a href="complain.html"> Complain Here </a>
                    <a href=userInfoDisplay.php>My Information</a>
+                   <a href=councellor.php>Councellor Information</a>
+                   <p>
+                       <a href="policeStation.php">Police Station</a>
+                   </p>
+                   <a href="hospitals.html">Hospitals </a>
+
 
               
 

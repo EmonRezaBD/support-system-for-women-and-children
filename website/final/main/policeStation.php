@@ -50,46 +50,59 @@
     <section>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 side-image d-none d-md-block">
-                    <img src="img/childrenRight.jpg" alt="Login">
-                </div>
-                <div class="col-md-6">
-                    <div class="login-box">
-                        <div class="title">
-                            <img src="img/favicon.png" alt="Logo">
-                            <h3>Login</h3>
-                        </div>
-                        <form action="loginConnect.php" method="POST" class="form-1">
-                            <div class="row mt-4 form-group">
-                                <div class="col-12">
-                                    <input type="email" placeholder="Username / Email" name="email">
-                                </div>
-                            </div>
-                            <div class="row mt-4 form-group">
-                                <div class="col-12">
-                                    <input type="password" placeholder="Password" name="pass">
-                                </div>
-                            </div>
-                            <div class="row mt-4 form-group">
-                                <div class="col-12">
-                                    <a href="#">Forgot your password ?</a>
-                                </div>
-                            </div>
-                            <div class="row mt-4 form-group">
-                                <div class="col-12">
-                                    <button type="submit" class="btn-2">Login</button>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="mt-5 text-center">
-                            <a class="register-text" href="registration.html">Don't have an account? Register</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <div class="col-md-6 side-image-2 d-none d-md-block">
+                    <p> <h5> Your Account. </h5> </p>
+                    <p> <h6>Showing the details of police stations by applying PL/SQL CURSOR </h6> </p>
+                   
 
-        
+                            <?php
+
+                            $conn = oci_connect("emonreza","rezacse", "localhost/XE");
+                              if(!$conn){
+                                  echo "Failed to connect to Oracle";
+                                  exit();
+                              }
+
+
+                            $sql = "DECLARE 
+                                    CURSOR p_cursor IS
+                                    select id,name from police_station;
+                                    BEGIN
+                                    FOR p_val IN p_cursor
+                                    LOOP
+                                    EXIT WHEN
+                                     p_cursor%NOTFOUND;
+
+                                    DBMS_OUTPUT.PUT_LINE(p_val.id);
+                                    END LOOP;
+
+                                    END;";
+
+
+                              $stid = oci_parse($conn, $sql);
+                              oci_execute($stid);
+
+                               echo "<table border='3'>\n";
+
+                            while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) 
+                            {
+                              echo "<tr>\n";
+                              foreach ($row as $item)
+                               {
+                                echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+                              }
+                             echo "</tr>\n";
+                          }
+                          echo "</table>\n";
+
+                        
+                                
+                            ?>
+
+                    <!-- <img src="img/acheivement.jpg" alt="Login"> -->
+                </div>
+
+        </div>
     </section>
     <!-- End -->
 
@@ -145,13 +158,11 @@
     <!-- End -->
 
 
-
-
-
-
     <script src="js/jquery3.5.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
 </html>
+
+ 

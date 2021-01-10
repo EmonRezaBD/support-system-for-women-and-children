@@ -50,46 +50,58 @@
     <section>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 side-image d-none d-md-block">
-                    <img src="img/childrenRight.jpg" alt="Login">
+                <div class="col-md-6 side-image-2 d-none d-md-block">
+                    <img src="img/acheivement.jpg" alt="Login">
                 </div>
                 <div class="col-md-6">
                     <div class="login-box">
                         <div class="title">
                             <img src="img/favicon.png" alt="Logo">
-                            <h3>Login</h3>
+                            <h3>Register new Hospital</h3>
                         </div>
-                        <form action="loginConnect.php" method="POST" class="form-1">
+                        <form action="hospitals.php" method="POST" class="form-1">
                             <div class="row mt-4 form-group">
                                 <div class="col-12">
-                                    <input type="email" placeholder="Username / Email" name="email">
+                                    <label>Hospital Name</label>
+                                    <input type="text" placeholder="Hospital Name" name="name">
                                 </div>
                             </div>
                             <div class="row mt-4 form-group">
                                 <div class="col-12">
-                                    <input type="password" placeholder="Password" name="pass">
+                                    <label>Mobile No</label>
+                                    <input type="text" placeholder="Mobile No" name="mobile">
+                                </div>
+                            </div>
+
+                            <div class="row mt-4 form-group">
+                                <div class="col-12">
+                                    <label>Email</label>
+                                    <input type="email" placeholder="Email" name="email">
+                                </div>
+                            </div>
+
+                            <div class="row mt-4 form-group">
+                                <div class="col-12">
+                                    <label>Location</label>
+                                    <input type="text" placeholder="Location" name="location">
                                 </div>
                             </div>
                             <div class="row mt-4 form-group">
                                 <div class="col-12">
-                                    <a href="#">Forgot your password ?</a>
+                                    <label>Fax No</label>
+                                    <input type="tel" placeholder="Fax Number" name="fax">
                                 </div>
                             </div>
                             <div class="row mt-4 form-group">
-                                <div class="col-12">
-                                    <button type="submit" class="btn-2">Login</button>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn-2">Register</button>
                                 </div>
                             </div>
                         </form>
-                        <div class="mt-5 text-center">
-                            <a class="register-text" href="registration.html">Don't have an account? Register</a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        
     </section>
     <!-- End -->
 

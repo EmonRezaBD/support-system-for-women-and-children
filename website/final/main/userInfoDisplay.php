@@ -67,26 +67,20 @@
                               $stid = oci_parse($conn, $sql);
                               oci_execute($stid);
 
-                              echo "User ID";
-                              echo "Name";
+            echo "<table border='3'>\n";
 
+            while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) 
+            {
+              echo "<tr>\n";
+              foreach ($row as $item)
+               {
+                echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+             echo "</tr>\n";
+          }
+          echo "</table>\n";
 
-                             while (($row = oci_fetch_array($stid, OCI_BOTH)) != FALSE) {
-                               echo $row[0]."<br>";
-                               echo $row[1]."<br>";
-                                 echo $row[2]."<br>";
-                                   echo $row[3]."<br>";
-                               echo $row[4]."<br>";
-                               echo $row[5]."<br>";
-                                 echo $row[6]."<br>";
-                                   echo $row[7]."<br>";
-                                echo $row[8]."<br>";
-                               echo $row[9]."<br>";
-                                 echo $row[10]."<br>";
-                                   echo $row[11]."<br>";
-
-
-                              }
+                              
 
                             ?>
 
