@@ -17,3 +17,9 @@ values (
 '01','Domestic Violence', 'Occurred at Makinganj ..', '9 pm', 'Manikganj','no','no','no' 
 
 );
+
+select id,details from incident
+where place in (select place from incident where type = 'Child Marriage');
+
+
+select COUNT(id) from incident group by place;

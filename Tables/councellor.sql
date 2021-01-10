@@ -14,3 +14,7 @@ values('102','psychology','mon 3 pm');
 values('103','child specialist','mon 5 pm');
 values('104','child specialist','wed 10 am');
 values('105','Medicine','wed 11 am');
+
+select name,type,address,appointment_time
+from users u, councellor c
+where u.user_id = c.user_id;
