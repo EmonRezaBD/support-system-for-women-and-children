@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
+     <!-- Header Section -->
+     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white nav-shadow" id="nav">
             <div class="container">
                 <a class="navbar-brand" href="/"><img src="img/logo.png" alt="Chaya Logo"></a>
@@ -28,10 +28,10 @@
                             <a class="nav-link" href="#"><span><img src="img/icons8_about_24px.png" alt=""></span> About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span><img src="img/icons8_helping_hand_30px.png" alt=""></span> Services</a>
+                            <a class="nav-link" href="services.php"><span><img src="img/icons8_helping_hand_30px.png" alt=""></span> Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span><img src="img/icons8_help_24px.png" alt=""></span> Emergency</a>
+                            <a data-shake class="nav-link" href="#"><span><img src="img/icons8_help_24px.png" alt=""></span> Emergency</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><span><img src="img/icons8_online_support_50px.png" alt=""></span> Contact</a>
@@ -50,12 +50,24 @@
     <section>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 side-image-2 d-none d-md-block">
-                    <p> <h5> Your Account. </h5> </p>
-                    <p> <h6>Showing the details of councellors by applying join </h6> </p>
-                   
 
-                            <?php
+            <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-header bg-warning">
+                            <h3 class="text-white">Your Account.</h3>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-light-black">Showing the details of councellors by applying join </h6>
+                            <div class="table-responsive mt-4">
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Address</th>
+                                            <th>Counceling Time</th>
+                                        </tr>
+                                    </thead>
+                                    <?php
 
                             $conn = oci_connect("emonreza","rezacse", "localhost/XE");
                               if(!$conn){
@@ -72,7 +84,7 @@
                               $stid = oci_parse($conn, $sql);
                               oci_execute($stid);
 
-                                echo "<table border='3'>\n";
+                                echo "<tbody>\n";
 
                                 while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) 
                                 {
@@ -83,18 +95,13 @@
                                   }
                                  echo "</tr>\n";
                               }
-                              echo "</table>\n";
+                              echo "</tbody>\n";
 
                             ?>
-
-                    <div class="col-md-6">
-
-
-                       
-                    
-                </div>
-
-                    <!-- <img src="img/acheivement.jpg" alt="Login"> -->
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
         </div>

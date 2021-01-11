@@ -28,10 +28,10 @@
                             <a class="nav-link" href="#"><span><img src="img/icons8_about_24px.png" alt=""></span> About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span><img src="img/icons8_helping_hand_30px.png" alt=""></span> Services</a>
+                            <a class="nav-link" href="services.php"><span><img src="img/icons8_helping_hand_30px.png" alt=""></span> Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span><img src="img/icons8_help_24px.png" alt=""></span> Emergency</a>
+                            <a data-shake class="nav-link" href="#"><span><img src="img/icons8_help_24px.png" alt=""></span> Emergency</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><span><img src="img/icons8_online_support_50px.png" alt=""></span> Contact</a>
@@ -48,14 +48,24 @@
 
     <!-- Login Area -->
     <section>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 side-image-2 d-none d-md-block">
-                    <p> <h5> Your Account. </h5> </p>
-                    <p> <h6>Showing the details of victims(Child Marriage) by applying subquery </h6> </p>
-                   
-
-                            <?php
+        <div class="container pb-5">
+        <div class="row justify-content-center mt-5">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5> Your Account. </h5>
+                        </div>
+                        <div class="card-body">
+                            <h6>Showing the details of victims(Child Marriage) by applying subquery </h6>
+                            <div class="table-responsive mt-4">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Case No.</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <?php
 
                             $conn = oci_connect("emonreza","rezacse", "localhost/XE");
                               if(!$conn){
@@ -70,7 +80,7 @@
                               $stid = oci_parse($conn, $sql);
                               oci_execute($stid);
 
-                                echo "<table border='3'>\n";
+                                echo "<tbody>\n";
 
                                 while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) 
                                 {
@@ -81,15 +91,24 @@
                                   }
                                  echo "</tr>\n";
                               }
-                              echo "</table>\n";
+                              echo "</tbody>\n";
 
                             ?>
+                                </table>
+                            </div>
 
-                            <p> <h6>Showing location wise victim count by applying Group Function </h6> </p>
-
-                
-
-                            <?php
+                            <div class="mt-4">
+                                <h6>Showing location wise victim count by applying Group Function </h6>
+                            </div>
+                            <div class="table-responsive mt-4">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>ID.</th>
+                                            <th>Location</th>
+                                        </tr>
+                                    </thead>
+                                    <?php
 
                             $conn = oci_connect("emonreza","rezacse", "localhost/XE");
                               if(!$conn){
@@ -104,7 +123,7 @@
                               $stid = oci_parse($conn, $sql);
                               oci_execute($stid);
 
-                                echo "<table border='3'>\n";
+                                echo "<tbody>\n";
 
                                 while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) 
                                 {
@@ -115,23 +134,15 @@
                                   }
                                  echo "</tr>\n";
                               }
-                              echo "</table>\n";
+                              echo "</tbody>\n";
 
                             ?>
-
-
-
-                    <div class="col-md-6">
-
-
-                       
-                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                    <!-- <img src="img/acheivement.jpg" alt="Login"> -->
-                </div>
-
-        </div>
+            </div>
     </section>
     <!-- End -->
 

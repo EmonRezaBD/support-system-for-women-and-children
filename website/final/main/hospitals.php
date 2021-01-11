@@ -28,10 +28,10 @@
                             <a class="nav-link" href="#"><span><img src="img/icons8_about_24px.png" alt=""></span> About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span><img src="img/icons8_helping_hand_30px.png" alt=""></span> Services</a>
+                            <a class="nav-link" href="services.php"><span><img src="img/icons8_helping_hand_30px.png" alt=""></span> Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span><img src="img/icons8_help_24px.png" alt=""></span> Emergency</a>
+                            <a data-shake class="nav-link" href="#"><span><img src="img/icons8_help_24px.png" alt=""></span> Emergency</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><span><img src="img/icons8_online_support_50px.png" alt=""></span> Contact</a>
@@ -48,16 +48,27 @@
 
     <!-- Login Area -->
     <section>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 side-image-2 d-none d-md-block">
-
-
-
-                    <h2> Welcome to Chaya. </h2>
-                    <p> <h3> Hospitals in charge </h3> </p>
-
-                     <?php
+        <div class="container pb-5">
+        <div class="row justify-content-center mt-5">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-header bg-success">
+                            <h2 class="text-white"> Welcome to Chaya. </h2>
+                        </div>
+                        <div class="card-body">
+                            <h3> Hospitals in charge </h3>
+                            <div class="table-responsive mt-4">
+                                <table class="table tabl-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Mobile</th>
+                                            <th>Email</th>
+                                            <th>Location</th>
+                                            <th>Fax</th>
+                                        </tr>
+                                    </thead>
+                                    <?php
 
                             $conn = oci_connect("emonreza","rezacse", "localhost/XE");
                               if(!$conn){
@@ -91,7 +102,7 @@
 
                               // echo " Hello";
 
-                              echo "<table border='3'>\n";
+                              echo "<tbody>\n";
 
                             while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) 
                             {
@@ -102,19 +113,19 @@
                               }
                              echo "</tr>\n";
                           }
-                          echo "</table>\n";
+                          echo "</tbody>\n";
                                                                                   
 
                         
                                 
                             ?>
-
-
-
-
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-        </div>
+            </div>
+        <!-- Spare -->
 
               
 

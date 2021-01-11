@@ -28,10 +28,10 @@
                             <a class="nav-link" href="#"><span><img src="img/icons8_about_24px.png" alt=""></span> About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.php"><span><img src="img/icons8_helping_hand_30px.png" alt=""></span> Services</a>
+                            <a class="nav-link" href="#"><span><img src="img/icons8_helping_hand_30px.png" alt=""></span> Services</a>
                         </li>
                         <li class="nav-item">
-                            <a data-shake class="nav-link" href="#"><span><img src="img/icons8_help_24px.png" alt=""></span> Emergency</a>
+                            <a class="nav-link" href="#"><span><img src="img/icons8_help_24px.png" alt=""></span> Emergency</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><span><img src="img/icons8_online_support_50px.png" alt=""></span> Contact</a>
@@ -48,63 +48,52 @@
 
     <!-- Login Area -->
     <section>
-        <div class="container pb-5">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>User Account.</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Full Name</th>
-                                            <th>Age</th>
-                                            <th>Date of Birth</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
-                                            <th>Address</th>
-                                            <th>Spouse/Husband</th>
-                                            <th>Father's Name</th>
-                                            <th>Mother's Name</th>
-                                            <th>Gender</th>
-                                            <th>#</th>
-                                            <th>#</th>
-                                        </tr>
-                                    </thead>
-                                        <?php
+                <div class="col-md-6 side-image-2 d-none d-md-block">
+                    <p> <h3> User Account. </h3> </p>
+                   
 
-                                                        $conn = oci_connect("emonreza","rezacse", "localhost/XE");
-                                                        if(!$conn){
-                                                            echo "Failed to connect to Oracle";
-                                                            exit();
-                                                        }
+                            <?php
+
+                            $conn = oci_connect("emonreza","rezacse", "localhost/XE");
+                              if(!$conn){
+                                  echo "Failed to connect to Oracle";
+                                  exit();
+                              }
 
 
-                                                        $sql = 'select * from users';
-                                                        $stid = oci_parse($conn, $sql);
-                                                        oci_execute($stid);
+                              $sql = 'select * from users';
+                              $stid = oci_parse($conn, $sql);
+                              oci_execute($stid);
 
-                                        echo "<tbody>\n";
+            echo "<table border='3'>\n";
 
-                                        while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) 
-                                        {
-                                        echo "<tr>\n";
-                                        foreach ($row as $item)
-                                        {
-                                            echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-                                        }
-                                        echo "</tr>\n";
-                                    }
-                                    echo "</tbody>\n"; 
-                                ?>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+            while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) 
+            {
+              echo "<tr>\n";
+              foreach ($row as $item)
+               {
+                echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+             echo "</tr>\n";
+          }
+          echo "</table>\n";
+
+                              
+
+                            ?>
+
+
+
+                    <div class="col-md-6">
+
+
+                       
+                    
+                </div>
+
+                    <!-- <img src="img/acheivement.jpg" alt="Login"> -->
                 </div>
 
         </div>

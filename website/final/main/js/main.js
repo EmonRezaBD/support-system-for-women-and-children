@@ -1,4 +1,4 @@
-///////////////// fixed menu on scroll for desktop
+// fixed menu on scroll for desktop
 $(window).scroll(function() {
     if ($(this).scrollTop() > 40) {
         $('#nav').addClass("fixed-top");
@@ -11,3 +11,8 @@ $(window).scroll(function() {
     }
 });
 // end
+// Shake elements
+$('[data-shake]').click(function(e) {
+    $(this).toggleClass('shake-me');
+});
+//
