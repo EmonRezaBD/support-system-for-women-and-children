@@ -9,7 +9,7 @@ oracle 11g XE is recommended.
 2. Instant Client:
 instantclient_12_1 is recommended.
 
-3.Xampp:
+3. Xampp:
 32 bit xampp is recommened. 
 
 4. Text Editor or IDE:
