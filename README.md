@@ -17,7 +17,8 @@ Sublime text or VS code etc.
 #Connection:
 1. Create a .php file
 2. write this code: $conn = oci_connect('user name', 'password', 'localhost/XE');
-***Note the username and pass is the database credentials, it means the user name and pass you have provide for 2nd phase login in Oracle.
+<span style="color:blue">Note: the username and pass is the database credentials, it means the user name and pass you have provide for 2nd phase login in Oracle.
+</span>.
 
 
 
