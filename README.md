@@ -26,3 +26,6 @@ Sublime text or VS code etc.
 1. Create a frontend
 2. Connect the frontend with the database, all tables should be created beforehand
 # Look my codes for more information. 
+    I use bootstrap for frontend.
+    Raw php for backend.
+    No framework is used(ex. React, Laravel) here. This is a simple and small scale project which can be implemented within short time. 
