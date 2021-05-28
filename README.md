@@ -1,5 +1,6 @@
 # Chaya
-Database Project
+Database Project.
+This codebase is created for my undergrad databse sessional project purpose. 
 
 # Installation:
 1. Oracle Express Edition: 
