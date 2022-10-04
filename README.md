@@ -1,5 +1,6 @@
-# Chaya
-Database Project.
+#Developing a Machine Learning Based Support System for Mitigating the Suppression Against Women and Children
+
+
 This codebase is created for my undergrad database sessional project purpose. 
 
 # Installation:
