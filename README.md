@@ -15,24 +15,17 @@ The repository is organized as follow:
 * <code>crimePediction</code>contains python code used for building <b>machine learning models</b> and data analysis
 * <code>readme.md</code>:contains the description of this project
 
-# Environment Setup:
-For develop the web app, these 
-1. Oracle Express Edition: 
-oracle 11g XE is recommended.
+# Environment Setup
+For develop the web app, these installations are needed-
+1. Oracle Express Edition: oracle 11g XE is recommended
+2. Instant Client: instantclient_12_1 is recommended
+3. Xampp: 32 bit xampp is recommened
+4. Text Editor or IDE: Sublime text or VS code etc.
 
-2. Instant Client:
-instantclient_12_1 is recommended.
-
-3. Xampp:
-32 bit xampp is recommened. 
-
-4. Text Editor or IDE:
-Sublime text or VS code etc.
-
-# Connection:
-1. Create a .php file
-2. write this code: $conn = oci_connect('user name', 'password', 'localhost/XE');
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)  Note: the username and pass is the database credentials, it means the user name and pass you have provide for 2nd phase login in Oracle
+# Connection To Oracle DB
+1. Create a .php file (i.e. connect.php)
+2. write this code snippet for connect: <code>$conn = oci_connect('user name', 'password', 'localhost/XE');</code>
+    Note: the username and pass is the database credentials, it means the user name and pass you have provided for 2nd phase login in Oracle express
 3. Start apache server in xampp
 4. run the file: localhost:8080/folder name/file name
 
