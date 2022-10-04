@@ -5,12 +5,14 @@
 This codebase is created for our undergrad database sessional project purpose. However, codes are modified and new concepts are introduced for our submission to ICEEICT 2021.
 
 The repository is organized as follow:
-* Tables
+* <code> Tables </code> : contains all the schemas needed for web application.
 * HTML
 * CSS
 * JS
 * PHP
 * SQL
+* Crime Pediction
+* 
 
 # Installation:
 1. Oracle Express Edition: 
