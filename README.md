@@ -30,8 +30,11 @@ For develop the web app, these installations are needed-
 4. run the file in browser:<code>localhost:8080/folder name/file name</code>
 
 No framework is used here. This is a simple and small scalable project which can be implemented within short time. 
-# Cite us
+
+# Cite Us
+If you found our research interesting, cite us. 
 <code>
+    <pre>
 @inproceedings{reza2021developing,
   title={Developing a Machine Learning Based Support System for Mitigating the Suppression Against Women and Children},
   author={Reza, Md Rokonuzzaman and Mannan, Fabiha Mukarrama Binte and Barua, Dhrubo and Islam, Shafayetul and Khan, Nafiz Imtiaz and Mahmud, Sharifa Rania},
@@ -40,5 +43,6 @@ No framework is used here. This is a simple and small scalable project which can
   year={2021},
   organization={IEEE}
 }
+</pre>
 </code>
 
