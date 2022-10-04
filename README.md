@@ -1,6 +1,6 @@
 # Developing a Machine Learning Based Support System for Mitigating the Suppression Against Women and Children
 
-[Reza et al.] (https://scholar.google.com/citations?user=9Tcxq-0AAAAJ&hl=en) *2021 5th International Conference on Electrical Engineering and Information Communication Technology (ICEEICT)*
+[Reza et al.](https://scholar.google.com/citations?user=9Tcxq-0AAAAJ&hl=en) *2021 5th International Conference on Electrical Engineering and Information Communication Technology (ICEEICT)*
 
 This codebase is created for my undergrad database sessional project purpose. 
 
