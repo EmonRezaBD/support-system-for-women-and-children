@@ -5,15 +5,15 @@
 This codebase is created for our undergrad database sessional project purpose. However, codes are modified and new concepts are introduced for our submission to ICEEICT 2021.
 
 The repository is organized as follow:
-* <code>Tables</code> : contains all the schemas needed for web application.
-* <code>HTML</code>: HTML
-* <code>CSS</code>: CSS
-* <code>JS</code>: JS
-* <code>PHP</code>: PHP
-* <code>SQL</code>: SQL
-* <code>img</code>: img
-* <code>crimePediction</code>: Crime Pediction
-* <code>readme.md</code>: 
+* <code>Tables</code>contains all the schemas needed for web application
+* <code>HTML</code>contains all the HTML files required
+* <code>CSS</code>contains all the CSS files used
+* <code>JS</code>contains all the JS files
+* <code>PHP</code>contains all the PHP files used for connection and CRUD operations
+* <code>SQL</code>contains all queries for data manipulation etc.
+* <code>img</code>contains all images used in web app
+* <code>crimePediction</code>contains python code used for building <b>machine learning models</b> and data analysis
+* <code>readme.md</code>:contains the description of this project
 
 # Installation:
 1. Oracle Express Edition: 
