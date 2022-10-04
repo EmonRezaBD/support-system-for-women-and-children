@@ -25,15 +25,20 @@ For develop the web app, these installations are needed-
 # Connection To Oracle DB
 1. Create a .php file (i.e. connect.php)
 2. write this code snippet for connect: <code>$conn = oci_connect('user name', 'password', 'localhost/XE');</code>
-    Note: the username and pass is the database credentials, it means the user name and pass you have provided for 2nd phase login in Oracle express
+    N.B: the username and pass is the database credentials, it means the user name and pass you have provided for 2nd phase login in Oracle express
 3. Start apache server in xampp
-4. run the file: localhost:8080/folder name/file name
+4. run the file in browser:<code>localhost:8080/folder name/file name</code>
 
+No framework is used here. This is a simple and small scalable project which can be implemented within short time. 
+# Cite us
+<code>
+@inproceedings{reza2021developing,
+  title={Developing a Machine Learning Based Support System for Mitigating the Suppression Against Women and Children},
+  author={Reza, Md Rokonuzzaman and Mannan, Fabiha Mukarrama Binte and Barua, Dhrubo and Islam, Shafayetul and Khan, Nafiz Imtiaz and Mahmud, Sharifa Rania},
+  booktitle={2021 5th International Conference on Electrical Engineering and Information \& Communication Technology (ICEEICT)},
+  pages={1--6},
+  year={2021},
+  organization={IEEE}
+}
+</code>
 
-# Work:
-1. Create a frontend
-2. Connect the frontend with the database, all tables should be created beforehand
-# Look my codes for more information. 
-    I use bootstrap for frontend.
-    Raw php for backend.
-    No framework is used(ex. React, Laravel) here. This is a simple and small scale project which can be implemented within short time. 
