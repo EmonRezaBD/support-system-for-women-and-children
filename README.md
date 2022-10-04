@@ -15,7 +15,8 @@ The repository is organized as follow:
 * <code>crimePediction</code>contains python code used for building <b>machine learning models</b> and data analysis
 * <code>readme.md</code>:contains the description of this project
 
-# Installation:
+# Environment Setup:
+For develop the web app, these 
 1. Oracle Express Edition: 
 oracle 11g XE is recommended.
 
