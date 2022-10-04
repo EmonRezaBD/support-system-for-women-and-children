@@ -2,7 +2,15 @@
 
 [Reza et al.](https://scholar.google.com/citations?user=9Tcxq-0AAAAJ&hl=en) *2021 5th International Conference on Electrical Engineering and Information Communication Technology (ICEEICT)*
 
-This codebase is created for my undergrad database sessional project purpose. 
+This codebase is created for our undergrad database sessional project purpose. However, codes are modified and new concepts are introduced for our submission to ICEEICT 2021.
+
+The repository is organized as follow:
+* Tables
+* HTML
+* CSS
+* JS
+* PHP
+* SQL
 
 # Installation:
 1. Oracle Express Edition: 
