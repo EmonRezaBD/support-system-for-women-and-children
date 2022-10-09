@@ -15,7 +15,7 @@ The repository is organized as follow:
 * <code>SQL</code>contains all queries for data manipulation etc.
 * <code>img</code>contains all images used in web app
 * <code>crimePediction</code>contains python code used for building <b>machine learning models</b> and data analysis
-* <code>readme.md</code>:contains the description of this project
+* <code>readme.md</code>contains the description of this project
 
 # Environment Setup
 For develop the web app, these installations are needed-
@@ -29,7 +29,7 @@ For develop the web app, these installations are needed-
 2. write this code snippet for connect: <code>$conn = oci_connect('user name', 'password', 'localhost/XE');</code>
     N.B: the username and pass is the database credentials, it means the user name and pass you have provided for 2nd phase login in Oracle express
 3. Start apache server in xampp
-4. run the file in browser:<code>localhost:8080/folder name/file name</code>
+4. run the file in browser <code>localhost:8080/folder name/file name</code>
 
 No framework is used here. This is a simple and small scalable project which can be implemented within short time. 
 
